@@ -6,7 +6,7 @@ main() {
     cout<<" enter any two numbers ";
     cin>>a>>b;
     c=gcd(a,b);
-    cout<<" \n "<<" gcd of "<<a<<" and "<<b<<" is: "<<c;
+    cout<<" \n "<<" the gcd(hcf) of "<<a<<" and "<<b<<" is = "<<c;
     }
 int gcd(int a,int b)
 {
