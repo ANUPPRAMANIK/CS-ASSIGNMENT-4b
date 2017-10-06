@@ -1,20 +1,33 @@
 #include<iostream>
 using namespace std;
-int max(int A[], int n)
+int i=0,x=0;
+int max(int a[10])
 {
-	if (n==1)
-	return A[0];
-	return max(A[n-1], findMaxRec(A, n-1));
-	}
-	int findMinRec(int A[], int n)
+	if(a[i]>a[0])
+	a[0]=a[i];
+	if(i<10)
 	{
-		if (n==1)
-		return A[0];
-		return min(A[n-1], findMinRec(A, n-1));
+		i++;
+		max(a);
 		}
-		main() {
-			int A[]={3,9,10,2,-34,19,23,67,-5};
-			int n=sizeof(A)/sizeof(A[0]);
-			cout<<" max: "<<findMaxRec(A,n);
-			cout<<" min: "<<findMinRec(A,n);
+		return a[0];
 			}
+		int min(int b[10])
+		{
+			if(b[x]<b[0])
+			b[0]=b[x];
+			if(x<10)
+			{
+				x++;
+				min(b);
+				}
+				return b[0];
+				}
+				main() {
+					int a[10];
+					cout<<" enter the elements of array(0 to 100) ";
+					for(int x=0;x<10;x++)
+					cin>>a[x];
+					cout<<" \nmax: "<<max(a);
+					cout<<" \nmin: "<<min(a);
+					}
