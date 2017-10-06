@@ -2,18 +2,18 @@
 using namespace std;
 int fib(int a)
 {
-	if((a==1)||(a==0))
-	return(a);
+	if (a==1)
+	return 0;
 	else
-	return(fib(a-1)+fib(a-2));
+	if(a==2)
+	return 1;
+	else
+	return fib(a-1) + fib(a-2);
 	}
 	main() {
-		int c,d=0;
-		cout<<" enter a positive integer ";
-		cin>>c;
-		while(d<c)
-		{
-			cout<<fib(d)<<"  ";
-			d++;
+		int a;
+		cout<<" enter any integer ";
+		cin>>a;
+		cout<<" \nthe nth fibonacci term is: "<<fib(a);
 		}
-		}
+		
