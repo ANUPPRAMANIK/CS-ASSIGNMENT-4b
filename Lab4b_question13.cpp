@@ -1,18 +1,22 @@
 #include<iostream>
-#define SIZE 4
 using namespace std;
-void gt(int arr[SIZE][SIZE],int a, int b)
+int i=0;
+int arr(int x[],int n)
 {
-	if(a==SIZE)
+	cout<<x[i]<<"  ";
+	if(i<n-1)
 	{
-		return;
+		i++;
+		arr(x,n);
 		}
-		if(b==SIZE)
-		return gt(arr,a+1,0);
-		cout<<arr[a][b]<<" "; 
-		return gt(arr,a,b+1);
+		return 0;
 		}
 		main() {
-			int arre[SIZE][SIZE]={{1,2,3,4},{50,101,63,200},{50,240,600,300},{700,400,399,385}};
-			gt(arre,0,0);
+			int n[100],l;
+			cout<<" enter the number of elements of array(0 to 100) ";
+			cin>>l;
+			for(int k=0;k<l;k++)
+			cin>>n[k];
+			cout<<" \nthe array elements are: ";
+			arr(n,l);
 			}
